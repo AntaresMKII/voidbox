@@ -14,7 +14,7 @@ xbps-install -y dbus elogind xorg
 #openbox and lightdm
 xbps-install -y openbox obconf obmenu obmenu-generator tint2 nitrogen gtk+ lightdm lightdm-gtk-greeter-settings
 #zsh
-xbps-install -y bash-completion zsh
+xbps-install -y bash-completion zsh wget
 #ho-my-zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 #setup oh-my-zsh
