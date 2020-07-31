@@ -32,4 +32,4 @@ sudo ln -s /etc/sv/dbus /var/service
 sudo ln -s /etc/sv/elogind /var/service
 sudo ln -s /etc/sv/alsa /var/service
 sudo ln -s /etc/sv/connmand /var/service
-sduo ln -s /etc/sv/lightdm /var/service
+sudo ln -s /etc/sv/lightdm /var/service
