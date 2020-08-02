@@ -25,6 +25,8 @@ sudo xbps-install -y connman connman-ui connman-gtk
 sudo xbps-install -y alsa-utils alsa-plugins-pulseaudio pa-applet
 #other programs
 sudo xbps-install -y terminator Thunar chromium rofi
+#fonts
+sudo xbps-install -y fonts-roboto-ttf google-fonts-ttf
 
 
 #activate services
