@@ -14,10 +14,7 @@ sudo xbps-install -y dbus elogind xorg
 #openbox and lightdm
 sudo xbps-install -y openbox obconf obmenu obmenu-generator tint2 nitrogen gtk+ lightdm lightdm-gtk-greeter-settings lxappearance picom polybar
 #zsh
-sudo xbps-install -y bash-completion zsh wget
-#ho-my-zsh
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-#setup oh-my-zsh
+sudo xbps-install -y bash-completion zsh wget nano
 
 #wifi (connman)
 sudo xbps-install -y connman connman-ui connman-gtk
