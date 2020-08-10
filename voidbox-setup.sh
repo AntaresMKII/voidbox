@@ -25,10 +25,14 @@ sudo xbps-install -y terminator Thunar chromium rofi
 #fonts
 sudo xbps-install -y fonts-roboto-ttf google-fonts-ttf
 
+#creates the autostart file
+
+
 
 #activate services
 sudo ln -s /etc/sv/dbus /var/service
 sudo ln -s /etc/sv/elogind /var/service
 sudo ln -s /etc/sv/alsa /var/service
+sudo rm /var/service/NetworkManager
 sudo ln -s /etc/sv/connmand /var/service
 sudo ln -s /etc/sv/lightdm /var/service
