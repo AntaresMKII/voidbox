@@ -12,7 +12,7 @@ sudo xbps-install -Syu
 #services
 sudo xbps-install -y dbus elogind xorg 
 #openbox and lightdm
-sudo xbps-install -y openbox obconf obmenu obmenu-generator tint2 nitrogen gtk+ lightdm lightdm-gtk-greeter-settings lxappearance picom polybar
+sudo xbps-install -y openbox obconf obmenu obmenu-generator tint2 nitrogen gtk+ lightdm lightdm-gtk-greeter-settings lxappearance picom
 #zsh
 sudo xbps-install -y bash-completion zsh wget nano
 
@@ -21,7 +21,7 @@ sudo xbps-install -y connman connman-ui connman-gtk
 #audio
 sudo xbps-install -y alsa-utils alsa-plugins-pulseaudio pa-applet
 #other programs
-sudo xbps-install -y terminator Thunar chromium rofi geany
+sudo xbps-install -y terminator Thunar firefox rofi geany xterm
 #fonts
 sudo xbps-install -y fonts-roboto-ttf google-fonts-ttf
 
