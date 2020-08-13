@@ -1,7 +1,7 @@
 #!/bin/bash
 #A script to install everithing you need to start
 
-sudo xbps-install -S void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
+sudo xbps-install -Sy void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 
 sudo mkdir -p /etc/xbps.d
 sudo cp /usr/share/xbps.d/*-repository-*.conf /etc/xbps.d/
@@ -21,11 +21,12 @@ sudo xbps-install -y connman connman-ui connman-gtk
 #audio
 sudo xbps-install -y alsa-utils alsa-plugins-pulseaudio pa-applet
 #other programs
-sudo xbps-install -y terminator Thunar chromium rofi
+sudo xbps-install -y terminator Thunar chromium rofi geany
 #fonts
 sudo xbps-install -y fonts-roboto-ttf google-fonts-ttf
 
-#creates the autostart file
+#other
+
 
 
 
