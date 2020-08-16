@@ -34,26 +34,14 @@ sudo xbps-install -y alsa-utils alsa-plugins-pulseaudio pa-applet || ERROR="Inst
 #other programs
 sudo xbps-install -y terminator Thunar firefox rofi geany xterm || ERROR="Installation failed (6)"
 
-#installation openbox
-echo 'setting up openbox and tint2'
-cp ./dotfiles/openbox/autostart ~/.config/openbox/ || ERROR="Failure to copy 'autostart'"
-rm ~/.config/openbox/rc.xml || ERROR="Failure to remove 'rc.xml'"
-cp ./dotfiles/openbox/rc.xml ~/.config/openbox || ERROR="Failure to copy 'rc.xml'"
-
-#openbox themes installation
-git clone https://github.com/addy-dclxvi/openbox-theme-collections ~/.themes || ERROR="Failure to install openbox themes"
-
-#tint2 theme installation
-git clone https://github.com/addy-dclxvi/tint2-theme-collections ~/.config/tint2 --depth 1 || ERROR="Failure to install tint2 themes"
-
-
-
 echo 'activating services'
-#activate services
-#sudo ln -s /etc/sv/dbus /var/service
-#sudo ln -s /etc/sv/elogind /var/service
-#sudo ln -s /etc/sv/alsa /var/service
-#sudo rm /var/service/NetworkManager
-#sudo ln -s /etc/sv/connmand /var/service
-#sudo ln -s /etc/sv/lightdm /var/service
-#sudo ln -s /etc/sv/lightdm /var/service
+activate services
+sudo ln -s /etc/sv/dbus /var/service
+sudo ln -s /etc/sv/elogind /var/service
+sudo ln -s /etc/sv/alsa /var/service
+sudo rm /var/service/NetworkManager
+sudo ln -s /etc/sv/connmand /var/service
+sudo ln -s /etc/sv/lightdm /var/service
+sudo ln -s /etc/sv/lightdm /var/service
+
+echo "Error: $ERROR"
