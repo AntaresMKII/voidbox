@@ -1,0 +1,61 @@
+#!/bin/bash
+#=======================================================================
+#	0-repo-edit.sh
+#=======================================================================
+#Description:
+#Installs non free and multilib repositories fo xbps.
+#Changes the mirror for the xbps repository
+#=======================================================================
+#	Mirrors
+#=======================================================================
+#	Tier 1 - Manually mantained
+#	Tier 2 - Sync to nearest tier 1
+#=======================================================================
+
+declare -A mirrors
+
+mirrors[default]=https://alpha.de.repo.voidlinux.org/current					#default mirror
+
+mirrors[eu_finland]=https://alpha.de.repo.voidlinux.org/current					#tier 1 Finland
+mirrors[us_chicago]=https://mirrors.servercentral.com/voidlinux/current			#tier 1 Chicago
+mirrors[us_kansas]=https://alpha.us.repo.voidlinux.org/current					#tier 1 Kansas city
+mirrors[us_newyork]=https://mirror.clarkson.edu/voidlinux/current				#tier 1 New York
+
+mirrors[as_almaty]=https://mirror.ps.kz/voidlinux/current						#tier 2 Almaty KZ
+mirrors[as_china1]=https://mirrors.bfsu.edu.cn/voidlinux/current				#tier 2 China
+mirrors[as_china2]=https://mirrors.cnnic.cn/voidlinux/current					#tier 2 China
+AS_CHINA3=https://mirrors.tuna.tsinghua.edu.cn/voidlinux/current	#tier 2 China
+AS_SEOUL=https://mirror.maakpain.kro.kr/void/current				#tier 2 Seoul SK
+AS_SINGAPORE=https://void.webconverger.org/current					#tier 2 Singapore
+AU_CANBERRA=https://mirror.aarnet.edu.au/pub/voidlinux/current		#tier 2 Canberra AU
+AU_MELBOURNE=https://ftp.swin.edu.au/voidlinux/current				#tier 2 Melbourne AU
+EU_AMSTERDAM=https://void.cijber.net/current						#tier 2 Amsterdam
+EU_DENMARK1=http://dk.archive.ubuntu.com/voidlinux/current			#tier 2 Denmark
+EU_DENMARK2=http://ftp.dk.xemacs.org/voidlinux/current				#tier 2 Denmark
+EU_DENMARK3=https://mirrors.dotsrc.org/voidlinux/current			#tier 2 Denmark
+EU_HUNGARY=https://quantum-mirror.hu/mirrors/pub/voidlinux/current	#tier 2 Hungary
+EU_IRELAND=https://mirror.i-novus.ru/mirrors/voidlinux/current		#tier 2 Ireland
+EU_RUSSIA1=http://ftp.debian.ru/mirrors/voidlinux/current			#tier 2 Russia
+EU_RUSSIA2=https://mirror.yandex.ru/mirrors/voidlinux/current		#tier 2 Russia
+EU_SWEDEN1=https://cdimage.debian.org/mirror/voidlinux/current		#tier 2 Sweden
+EU_SWEDEN2=https://ftp.acc.umu.se/mirror/voidlinux/current			#tier 2 Sweden
+EU_SWEDEN3=https://ftp.gnome.org/mirror/voidlinux/current			#tier 2 Sweden
+EU_SWEDEN4=https://ftp.lysator.liu.se/pub/voidlinux/current			#tier 2 Sweden
+EU_SWEDEN5=https://ftp.sunet.se/mirror/voidlinux/current			#tier 2 Sweden
+
+#=======================================================================
+
+echo "==============================================\n"
+echo "Mirror selection\n"
+echo "Select the mirror nearest to you\n"
+echo "==============================================\n"
+echo "Tier 1 mirrors:\n"
+echo "Finland\tChicago, US\tKansas City, US\tNew York, US\n"
+echo "==============================================\n"
+echo "Tier 2 mirrors:\n"
+echo "Almaty, KZ\tChina 1\tChina 2\tChina 3\tSeoul, SK\tSingapore\tCanberra, AU\tMelbourne, AU\tAmsterdam\tDenmark 1\tDenmark 2\tDenmark 3\tHungary\tIreland\tRussia 1\tRussia 2\tSweden 1\tSweden 2\tSweden 3\tSweden 4\tSweden 5\n"
+echo "\nEnter the name of the mirror:"
+read ans
+echo $ans
+
+
