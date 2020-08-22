@@ -44,13 +44,20 @@ mirrors[eu_sweden4]=https://ftp.lysator.liu.se/pub/voidlinux/current			#tier 2 S
 mirrors[eu_sweden5]=https://ftp.sunet.se/mirror/voidlinux/current				#tier 2 Sweden
 
 #=======================================================================
+#	Mirror selection
+#=======================================================================
 
 echo "==============================================\n"
 echo "Mirror selection\n"
 echo "Select the mirror nearest to you\n"
 echo "==============================================\n"
-for key in "${!mirrors[@]}"; do
+for key in ${!mirrors[@]}; do
 	echo $key
 done
+echo "Enter the name of the mirror: "
+read ans
+echo "==============================================\n"
+
+#=======================================================================
 
 
