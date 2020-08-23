@@ -59,5 +59,17 @@ read ans
 echo "==============================================\n"
 
 #=======================================================================
+#	Changing mirror to the selected one
+#=======================================================================
+
+echo "Changing default mirror to " ${mirror[$ans]}
+
+sudo mkdir -p /etc/xbps.d
+sudo cp /usr/share/xbps.d/*-repository-*.conf /etc/xbps.d/
 
 
+
+sudo sed -i 's|https://alpha.de.repo.voidlinux.org|https://mirror.clarkson.edu/voidlinux|g' /etc/xbps.d/*-repository-*.conf
+
+
+#=======================================================================
