@@ -85,4 +85,9 @@ echo "=============================================="
 sudo xbps-install -Syu
 
 #=======================================================================
-#	EOF
+echo 'Done!'
+echo 'Do you whis to run the script 1-install.sh?'
+read input
+if [[$input == 'yes' || $input == 'y']]; then
+	bash ./1-install.sh
+fi

@@ -1,30 +1,6 @@
 #!/bin/bash
 
-ERROR="none"
 
-#A script to install everithing you need to start
-
-echo 'Installing additional repositories for xbps'
-
-sudo xbps-install -Sy void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree || ERROR="Additional repository installation failed"
-
-echo 'Changing repository mirror to New York'
-
-sudo mkdir -p /etc/xbps.d
-sudo cp /usr/share/xbps.d/*-repository-*.conf /etc/xbps.d/
-sudo sed -i 's|https://alpha.de.repo.voidlinux.org|https://mirror.clarkson.edu/voidlinux|g' /etc/xbps.d/*-repository-*.conf
-
-echo 'Updating the system'
-
-sudo xbps-install -Syu || ERROR="System update failed"
-
-#services
-echo 'installing dbus elogind and xorg'
-sudo xbps-install -y dbus elogind xorg || ERROR="Installation failed (1)"
-#openbox and lightdm
-echo 'installing programs'
-sudo xbps-install -y openbox obconf obmenu obmenu-generator tint2 nitrogen gtk+ lightdm lightdm-gtk-greeter-settings lxappearance picom || ERROR="Installation failed (2)"
-#zsh
 sudo xbps-install -y bash-completion zsh wget nano || ERROR="Installation failed (3)"
 
 #wifi (connman)
