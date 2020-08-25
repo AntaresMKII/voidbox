@@ -154,5 +154,3 @@ echo 'Done!'
 
 #activating lightdm
 sudo ln -s /etc/sv/lightdm /var/service
-
-#=======================================================================
