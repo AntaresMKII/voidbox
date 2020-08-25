@@ -67,8 +67,8 @@ echo 'installing dbus and elogind'
 sudo xbps-install -Sy dbus elogind
 
 echo 'activating dbus and elogind services'
-sudo ln -s /etc/sv/dbus /var/service
-sudo ln -s /etc/sv/elogind /var/service
+sudo ln -s /etc/sv/dbus /var/service/dbus
+sudo ln -s /etc/sv/elogind /var/service/elogind
 
 #=======================================================================
 #	xorg installation
@@ -130,7 +130,7 @@ sudo xbps-install -Sy connman conman-ui connman-gtk
 
 #activating services for connman
 sudo rm /var/service/NetworkManager
-sudo ln -s /etc/sv/connmand /var/service
+sudo ln -s /etc/sv/connmand /var/service/connmand
 
 #=======================================================================
 #	alsa installation
@@ -163,4 +163,4 @@ sudo xbps-install -Sy $TERMINAL $BROWSER $FILE_MANAGER $TEXT_EDITOR $TEXT_EDITOR
 echo 'Done!'
 
 #activating lightdm
-sudo ln -s /etc/sv/lightdm /var/service
+sudo ln -s /etc/sv/lightdm /var/service/lightdm
