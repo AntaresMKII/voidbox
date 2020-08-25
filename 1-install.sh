@@ -35,25 +35,25 @@ programSelection() {
 #=======================================================================
 
 echo '#################################################'
-echo 'Enter the pakage name of your terminal of choice. Enter [d]efault for $TERMINAL'
+echo 'Enter the pakage name of your terminal of choice. Enter [d]efault for ' $TERMINAL
 TERMINAL=$(programSelection $TERMINAL)						#terminal selection
 
-echo 'Enter the pakage name of your browser of choice. Enter [d]efault for $BROWSER'
+echo 'Enter the pakage name of your browser of choice. Enter [d]efault for ' $BROWSER
 BROWSER=$(programSelection $BROWSER)							#browser selection
 
-echo 'Enter the pakage name of your file manager of choice. Enter [d]efault for $FILE_MANAGER'
+echo 'Enter the pakage name of your file manager of choice. Enter [d]efault for ' $FILE_MANAGER
 FILE_MANAGER=$(programSelection $FILE_MANAGER)			#file manager selection
 
-echo 'Enter the pakage name of your text editor of choice. Enter [d]efault for $TEXT_EDITOR'
+echo 'Enter the pakage name of your text editor of choice. Enter [d]efault for ' $TEXT_EDITOR
 TEXT_EDITOR=$(programSelection $TEXT_EDITOR)				#text editor selection
 
-echo 'Enter the pakage name of your grafical text editor of choice. Enter [d]efault for $TEXT_EDITOR_G'
+echo 'Enter the pakage name of your grafical text editor of choice. Enter [d]efault for ' $TEXT_EDITOR_G
 TEXT_EDITOR_G=$(programSelection $TEXT_EDITOR_G)	#graphical text editor selection
 
-echo 'Enter the pakage name of your window manager of choice. Enter [d]efault for $WM'
+echo 'Enter the pakage name of your window manager of choice. Enter [d]efault for ' $WM
 WM=$(programSelection $WM)								#window manager selection
 
-echo 'Enter the pakage name of your shell of choice. Enter [d]efault for $SHELL'
+echo 'Enter the pakage name of your shell of choice. Enter [d]efault for ' $SHELL
 SHELL=$(programSelection $SHELL)								#shell selection
 
 #=======================================================================
