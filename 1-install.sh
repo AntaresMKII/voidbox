@@ -23,28 +23,38 @@ SHELL='zsh'				#default shell
 #=======================================================================
 
 programSelection() {
-	printf '#################################################'
-	printf 'Enter the pakage name of your $1 of choice.'
-	printf 'Write [d]efault for $2'
 	read ans
 	if [[ $ans == 'default' || $ans == 'd' ]]; then
-		ans=$2
+		ans=$1
 	fi
-	printf '$ans will be installed'
-	return $ans
+	echo $ans
 	}
 
 #=======================================================================
 #	Program selection
 #=======================================================================
 
-TERMINAL=$(programSelection 'terminal' $TERMINAL)						#terminal selection
-BROWSER=$(programSelection 'browser' $BROWSER)							#browser selection
-FILE_MANAGER=$(programSelection 'file manager' $FILE_MANAGER)			#file manager selection
-TEXT_EDITOR=$(programSelection 'text editor' $TEXT_EDITOR)				#text editor selection
-TEXT_EDITOR_G=$(programSelection 'text editor (gui)' $TEXT_EDITOR_G)	#graphical text editor selection
-WM=$(programSelection 'window manager' $WM)								#window manager selection
-SHELL=$(programSelection 'shell' $SHELL)								#shell selection
+echo '#################################################'
+echo 'Enter the pakage name of your terminal of choice. Enter [d]efault for $TERMINAL'
+TERMINAL=$(programSelection $TERMINAL)						#terminal selection
+
+echo 'Enter the pakage name of your browser of choice. Enter [d]efault for $BROWSER'
+BROWSER=$(programSelection $BROWSER)							#browser selection
+
+echo 'Enter the pakage name of your file manager of choice. Enter [d]efault for $FILE_MANAGER'
+FILE_MANAGER=$(programSelection $FILE_MANAGER)			#file manager selection
+
+echo 'Enter the pakage name of your text editor of choice. Enter [d]efault for $TEXT_EDITOR'
+TEXT_EDITOR=$(programSelection $TEXT_EDITOR)				#text editor selection
+
+echo 'Enter the pakage name of your grafical text editor of choice. Enter [d]efault for $TEXT_EDITOR_G'
+TEXT_EDITOR_G=$(programSelection $TEXT_EDITOR_G)	#graphical text editor selection
+
+echo 'Enter the pakage name of your window manager of choice. Enter [d]efault for $WM'
+WM=$(programSelection $WM)								#window manager selection
+
+echo 'Enter the pakage name of your shell of choice. Enter [d]efault for $SHELL'
+SHELL=$(programSelection $SHELL)								#shell selection
 
 #=======================================================================
 #	dbus and elogind installation and activation
