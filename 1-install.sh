@@ -117,7 +117,7 @@ sudo xbps-install -Sy tint2 nitrogen picom
 echo '#################################################'
 echo 'installing lightdm and lightdm-greeter-settings'
 
-sudo xbps-install -Sy lightdm lightdm-greeter-settings
+sudo xbps-install -Sy lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 
 #=======================================================================
 #	connman installation
@@ -126,7 +126,7 @@ sudo xbps-install -Sy lightdm lightdm-greeter-settings
 echo '#################################################'
 echo 'installing connman and related packages'
 
-sudo xbps-install -Sy connman conman-ui connman-gtk
+sudo xbps-install -Sy connman connman-gtk
 
 #activating services for connman
 sudo rm /var/service/NetworkManager
