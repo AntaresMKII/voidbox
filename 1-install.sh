@@ -102,15 +102,6 @@ echo 'installing gtk+ and lxappearance'
 sudo xbps-install -Sy gtk+ lxappearance
 
 #=======================================================================
-#	picom, tint2 and nitrogen installation
-#=======================================================================
-
-echo '#################################################'
-echo 'installing picom, tint2 and nitrogen'
-
-sudo xbps-install -Sy tint2 nitrogen picom
-
-#=======================================================================
 #	lightdm and lightdm-greeter-settings
 #=======================================================================
 
@@ -118,6 +109,15 @@ echo '#################################################'
 echo 'installing lightdm and lightdm-greeter-settings'
 
 sudo xbps-install -Sy lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+
+#=======================================================================
+#	picom, tint2 and nitrogen installation
+#=======================================================================
+
+echo '#################################################'
+echo 'installing picom, tint2 and nitrogen'
+
+sudo xbps-install -Sy tint2 nitrogen picom
 
 #=======================================================================
 #	connman installation
