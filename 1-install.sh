@@ -108,7 +108,7 @@ sudo xbps-install -Sy gtk+ lxappearance
 echo '#################################################'
 echo 'installing lightdm and lightdm-greeter-settings'
 
-sudo xbps-install -Sy lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+sudo xbps-install -Sy lightdm lightdm-gtk-greeter-settings
 
 #=======================================================================
 #	picom, tint2 and nitrogen installation
