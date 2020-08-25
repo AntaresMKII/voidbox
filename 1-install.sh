@@ -23,14 +23,14 @@ SHELL='zsh'				#default shell
 #=======================================================================
 
 programSelection() {
-	echo '#################################################'
-	echo 'Enter the pakage name of your $1 of choice.'
-	echo 'Write [d]efault for $2'
+	printf '#################################################'
+	printf 'Enter the pakage name of your $1 of choice.'
+	printf 'Write [d]efault for $2'
 	read ans
-	if [[$ans == 'default' || $ans == 'd']]; then
+	if [[ $ans == 'default' || $ans == 'd' ]]; then
 		ans=$2
 	fi
-	echo '$ans will be installed'
+	printf '$ans will be installed'
 	return $ans
 	}
 
@@ -76,7 +76,7 @@ sudo xbps-install -Sy xorg
 echo '#################################################'
 echo 'installing $WM'
 
-if	[[$WM == 'openbox']]; then
+if	[[ $WM == 'openbox' ]]; then
 	sudo xbps-install -Sy openbox obconf obmenu obmenu-generator
 else
 	sudo xbps-install -Sy $WM
