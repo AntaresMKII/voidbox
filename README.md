@@ -13,5 +13,5 @@ To learn more visit https://docs.voidlinux.org/xbps/repositories/mirrors/index.h
 2. After choosing the mirror, the script will install additional repositories then, it will change the mirror and perform an update of the system.
 3. The script will then execute the script '1-install.sh'. This script installs a window manager and other porgrams.
 
-# Customization
+## Customization
 Voidbx script is fully customizable. You can add new programs to install at the end of the script.
