@@ -2,10 +2,10 @@
 An easy and costumizable script to install all you need. This script only works for voidlinux.
 
 ## Installation
-Clone the repository in the folder of your chice then run the script '0-repo-edit.sh'
+Clone the repository in the folder of your chice then run the script ' 0-repo-edit.sh '
 
-'git clone https://github.com/AntaresMKII/voidbox.git'
-'bash 0-repo-edit.sh'
+' git clone https://github.com/AntaresMKII/voidbox.git '
+' bash 0-repo-edit.sh '
 
 ## Instructions
 1. After executing the script '0-repo-edit.sh' you will choose the location of the mirror for the package manager.
